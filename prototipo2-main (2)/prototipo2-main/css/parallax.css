@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.parallax-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 90%;
+}
+
+.parallax-1 {
+  background-image: url("../img/derek.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-2 {
+  background-image: url("../img/run.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 1.2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 600px) {
+  .parallax-section {
+    height: 85vh;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .parallax-content {
+    padding: 2.5rem;
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 768px) {
+  .parallax-section {
+    height: 100vh;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .parallax-content {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-section {
+    height: 70vh;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
